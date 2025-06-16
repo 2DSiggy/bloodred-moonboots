@@ -1,6 +1,7 @@
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Shared.Gravity;
+using Robust.Shared.Physics.Components;
 
 namespace Content.Server.Gravity;
 
@@ -35,6 +36,7 @@ public sealed class GravityGeneratorSystem : EntitySystem
 
     private void OnActivated(Entity<GravityGeneratorComponent> ent, ref ChargedMachineActivatedEvent args)
     {
+        EntityManager.GetComponent<PhysicsComponent>(grid).FixturesMass;
         ent.Comp.GravityActive = true;
 
         var xform = Transform(ent);

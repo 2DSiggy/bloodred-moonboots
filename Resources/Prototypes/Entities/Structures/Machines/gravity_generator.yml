@@ -58,6 +58,8 @@
   - type: GravityGenerator
     lightRadiusMin: 0.75
     lightRadiusMax: 2.5
+    maxMass: 99999
+    isMini: false
     spriteMap:
       broken: "broken"
       unpowered: "off"
@@ -137,5 +139,7 @@
   - type: GravityGenerator
     lightRadiusMin: 0.75
     lightRadiusMax: 2.5
+    maxMass: 750
+    isMini: true
   - type: StaticPrice
     price: 2000
